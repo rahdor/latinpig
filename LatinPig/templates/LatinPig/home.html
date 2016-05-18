@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="static/LatinPig/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'LatinPig/style.css' %}" />
+
+</head>
+
+<body>
+	<div id = 'title'>
+		L A T I N 
+		<br>
+		P I G 
+	</div>
+	<div id = "input">
+		 <form  action = "/" method = "POST" id="submit-word"> 
+			<input class="" type="text" id="inputword">
+			<input type="submit" value= "Translate" id="submittext">
+			{% csrf_token %}
+		 </form> 
+ 	</div>
+
+ 	<div id = "translated"></div>
+
+</body>
